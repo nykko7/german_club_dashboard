@@ -6,7 +6,7 @@ import { Container, Tab, Tabs, Box } from '@mui/material';
 // routes
 import { PATH_DASHBOARD } from '../../../routes/paths';
 // _mock_
-import { _userPayment, _userAddressBook, _userInvoices, _userAbout } from '../../../_mock/arrays';
+// import { _userPayment, _userAddressBook, _userInvoices, _userAbout } from '../../../_mock/arrays';
 // layouts
 import DashboardLayout from '../../../layouts/dashboard';
 // components
