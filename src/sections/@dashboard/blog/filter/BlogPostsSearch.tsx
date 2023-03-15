@@ -43,7 +43,7 @@ export default function BlogPostsSearch() {
   };
 
   const handleClick = (title: string) => {
-    push(PATH_DASHBOARD.blog.view(paramCase(title)));
+    push(PATH_DASHBOARD.news.view(paramCase(title)));
   };
 
   const handleKeyUp = (event: React.KeyboardEvent<HTMLInputElement>) => {

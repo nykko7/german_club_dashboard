@@ -45,19 +45,24 @@ const navConfig = [
         title: 'news',
         path: PATH_DASHBOARD.news.root,
         icon: ICONS.news,
-        children: [{ title: 'list', path: PATH_DASHBOARD.news.list }],
+        children: [
+          { title: 'list', path: PATH_DASHBOARD.news.list },
+          { title: 'create', path: PATH_DASHBOARD.news.new },
+        ],
       },
       {
         title: 'gallery',
         path: PATH_DASHBOARD.gallery.root,
         icon: ICONS.gallery,
-        children: [{ title: 'list', path: PATH_DASHBOARD.gallery.list }],
+        children: [
+          { title: 'list', path: PATH_DASHBOARD.gallery.list },
+          { title: 'create', path: PATH_DASHBOARD.gallery.new },
+        ],
       },
       {
         title: 'history',
         path: PATH_DASHBOARD.history.root,
         icon: ICONS.history,
-        children: [{ title: 'list', path: PATH_DASHBOARD.history.list }],
       },
     ],
   },
