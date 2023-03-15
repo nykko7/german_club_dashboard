@@ -62,8 +62,9 @@ const en = {
   // INTERNAL TRANSLATIONS:
   // ------------------------
   // HOME PAGE
-  german_club: 'German club',
+  german_club: 'German Club',
   welcome_page: 'Welcome page',
+  images_in_gallery: 'Images in gallery',
   // ------------------------
   // NAVIGATION
   home: 'Home',

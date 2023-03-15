@@ -55,8 +55,9 @@ const es = {
   // INTERNAL TRANSLATIONS:
   // ------------------------
   // HOME PAGE
-  german_club: 'Deutscher Verein',
+  german_club: 'Club Alemán',
   welcome_page: 'Página de bienvenida',
+  images_in_gallery: 'Imágenes en la galería',
   // ------------------------
   // NAVIGATION
   home: 'Inicio',

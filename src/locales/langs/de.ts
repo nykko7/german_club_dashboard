@@ -66,6 +66,7 @@ const de = {
   // HOME PAGE
   german_club: 'Deutscher Verein',
   welcome_page: 'Willkommensseite',
+  images_in_gallery: 'Bilder in der galerie',
   // ------------------------
   // NAVIGATION
   home: 'Startseite',
