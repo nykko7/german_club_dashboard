@@ -7,8 +7,8 @@ export default function Index() {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.pathname === '/dashboard/users') {
-      router.push('/dashboard/users/list');
+    if (router.pathname === '/dashboard/history') {
+      router.push('/dashboard/history/view');
     }
   });
 
