@@ -38,5 +38,7 @@ export const PATH_DASHBOARD = {
   },
   history: {
     root: path(ROOTS_DASHBOARD, '/history'),
+    view: path(ROOTS_DASHBOARD, '/history/view'),
+    edit: path(ROOTS_DASHBOARD, '/history/edit'),
   },
 };

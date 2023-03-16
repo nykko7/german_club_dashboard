@@ -59,6 +59,10 @@ const navConfig = [
         title: 'history',
         path: PATH_DASHBOARD.history.root,
         icon: ICONS.history,
+        children: [
+          { title: 'view', path: PATH_DASHBOARD.history.view },
+          { title: 'edit', path: PATH_DASHBOARD.history.edit },
+        ],
       },
     ],
   },

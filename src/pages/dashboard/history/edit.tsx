@@ -3,6 +3,10 @@ import Head from 'next/head';
 // @mui
 import { Container } from '@mui/material';
 // routes
+import { useLocales } from 'src/locales';
+import HistoryEditForm from 'src/sections/@dashboard/history/HistoryEditForm';
+import { _history } from 'src/_mock/arrays';
+import { useState } from 'react';
 import { PATH_DASHBOARD } from '../../../routes/paths';
 // layouts
 import DashboardLayout from '../../../layouts/dashboard';
@@ -10,42 +14,45 @@ import DashboardLayout from '../../../layouts/dashboard';
 import { useSettingsContext } from '../../../components/settings';
 import CustomBreadcrumbs from '../../../components/custom-breadcrumbs';
 // sections
-import { BlogNewPostForm } from '../../../sections/@dashboard/blog';
 
 // ----------------------------------------------------------------------
 
-BlogNewPostPage.getLayout = (page: React.ReactElement) => <DashboardLayout>{page}</DashboardLayout>;
+EditHistoryPage.getLayout = (page: React.ReactElement) => <DashboardLayout>{page}</DashboardLayout>;
 
 // ----------------------------------------------------------------------
 
-export default function BlogNewPostPage() {
+export default function EditHistoryPage() {
   const { themeStretch } = useSettingsContext();
+  const { translate } = useLocales();
+
+  const defaultHistory = _history;
+  const [history, setHistory] = useState(defaultHistory);
 
   return (
     <>
       <Head>
-        <title> Blog: New Post | Minimal UI</title>
+        <title> {`${translate('edit_history')}`}</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>
         <CustomBreadcrumbs
-          heading="Create a new post"
+          heading={`${translate('edit_history')}`}
           links={[
             {
               name: 'Dashboard',
               href: PATH_DASHBOARD.root,
             },
             {
-              name: 'Blog',
-              href: PATH_DASHBOARD.blog.root,
+              name: `${translate('history')}`,
+              href: PATH_DASHBOARD.history.root,
             },
             {
-              name: 'Create',
+              name: `${translate('edit')}`,
             },
           ]}
         />
 
-        <BlogNewPostForm />
+        <HistoryEditForm isEdit currentHistory={history} />
       </Container>
     </>
   );

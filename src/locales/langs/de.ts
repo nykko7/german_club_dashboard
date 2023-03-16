@@ -124,7 +124,9 @@ const de = {
   password_must_be_at_least_6_characters: 'Passwort muss mindestens 6 Zeichen lang sein',
   passwords_must_match: 'Passwörter müssen übereinstimmen',
   save_changes: 'Änderungen speichern',
-
+  // ------------------------
+  // HISTORY PAGES
+  edit_history: 'Geschichte bearbeiten',
   // ------------------------
   actions: 'Aktionen',
   sections: {

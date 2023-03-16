@@ -116,6 +116,9 @@ const es = {
   passwords_must_match: 'Las contraseñas deben coincidir',
   save_changes: 'Guardar cambios',
   // ------------------------
+  // HISTORY PAGES
+  edit_history: 'Editar historia',
+  // ------------------------
 
   actions: 'Acciones',
   sections: {

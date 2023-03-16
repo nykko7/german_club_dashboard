@@ -123,7 +123,9 @@ const en = {
   passwords_must_match: 'Passwords must match',
   save_changes: 'Save changes',
   // ------------------------
-
+  // HISTORY PAGES
+  edit_history: 'Edit history',
+  // ------------------------
   actions: 'Actions',
   sections: {
     history: {
