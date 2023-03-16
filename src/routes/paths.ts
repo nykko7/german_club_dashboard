@@ -34,13 +34,7 @@ export const PATH_DASHBOARD = {
     demoView: path(ROOTS_DASHBOARD, '/news/e99f09a7-dd88-49d5-b1c8-1daf80c2d7b5'),
   },
   gallery: {
-    root: path(ROOTS_DASHBOARD, '/gallery'),
-    list: path(ROOTS_DASHBOARD, '/gallery/list'),
-    new: path(ROOTS_DASHBOARD, '/gallery/new'),
-    view: (id: string) => path(ROOTS_DASHBOARD, `/gallery/${id}`),
-    edit: (id: string) => path(ROOTS_DASHBOARD, `/gallery/${id}/edit`),
-    demoEdit: path(ROOTS_DASHBOARD, '/gallery/e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1/edit'),
-    demoView: path(ROOTS_DASHBOARD, '/gallery/e99f09a7-dd88-49d5-b1c8-1daf80c2d7b5'),
+    root: path(ROOTS_DASHBOARD, '/gallery/list'),
   },
   history: {
     root: path(ROOTS_DASHBOARD, '/history'),

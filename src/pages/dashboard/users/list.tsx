@@ -33,6 +33,7 @@ import { _memberList } from '../../../_mock/arrays';
 // layouts
 import DashboardLayout from '../../../layouts/dashboard';
 // components
+import Label from '../../../components/label';
 import Iconify from '../../../components/iconify';
 import Scrollbar from '../../../components/scrollbar';
 import ConfirmDialog from '../../../components/confirm-dialog';
@@ -52,8 +53,6 @@ import {
 import { UserTableToolbar, UserTableRow } from '../../../sections/@dashboard/user/list';
 
 // ----------------------------------------------------------------------
-
-const POSITION_TYPES = ['all', 'directives', 'members'];
 
 interface IPositions {
   [key: string]: string[];
@@ -146,6 +145,20 @@ export default function UserListPage() {
     (!dataFiltered.length && !!filterName) ||
     (!dataFiltered.length && !!filterRole) ||
     (!dataFiltered.length && !!filterPosition);
+
+  const getLengthByPosition = (position: string) =>
+    tableData.filter((item) => ROLE_OPTIONS[position].includes(item.role)).length;
+
+  const POSITION_TYPES = [
+    { value: 'all', label: 'all', color: 'default', count: tableData.length },
+    {
+      value: 'directives',
+      label: 'directives',
+      color: 'primary',
+      count: getLengthByPosition('directives'),
+    },
+    { value: 'members', label: 'members', color: 'info', count: getLengthByPosition('members') },
+  ] as const;
 
   const handleOpenConfirm = () => {
     setOpenConfirm(true);
@@ -246,7 +259,16 @@ export default function UserListPage() {
             }}
           >
             {POSITION_TYPES.map((tab) => (
-              <Tab key={tab} label={`${translate(`positions.${tab}.name`)}`} value={tab} />
+              <Tab
+                key={tab.value}
+                label={`${translate(`positions.${tab.label}.name`)}`}
+                value={tab.value}
+                icon={
+                  <Label color={tab.color} sx={{ mr: 1 }}>
+                    {tab.count}
+                  </Label>
+                }
+              />
             ))}
           </Tabs>
 

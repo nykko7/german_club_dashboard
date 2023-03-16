@@ -9,3 +9,4 @@ export * from './_invoice';
 export * from './_ecommerce';
 export * from './_analytics';
 export * from './_member';
+export * from './_image';

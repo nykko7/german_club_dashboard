@@ -38,6 +38,7 @@ export default function Home() {
             <AnalyticsWidgetSummary
               title={`${translate('news')}`}
               total={10}
+              color="secondary"
               icon="ion:newspaper"
             />
           </Grid>
@@ -45,7 +46,6 @@ export default function Home() {
             <AnalyticsWidgetSummary
               title={`${translate('positions.directives.name')}`}
               total={7}
-              color="secondary"
               icon="fa-solid:users-cog"
             />
           </Grid>

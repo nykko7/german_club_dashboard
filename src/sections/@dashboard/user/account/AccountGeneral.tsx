@@ -7,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Grid, Card, Stack, Typography } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 // auth
+import { useLocales } from 'src/locales';
 import { useAuthContext } from '../../../../auth/useAuthContext';
 // utils
 import { fData } from '../../../../utils/formatNumber';
@@ -40,6 +41,8 @@ type FormValuesProps = {
 
 export default function AccountGeneral() {
   const { enqueueSnackbar } = useSnackbar();
+
+  const { translate } = useLocales();
 
   const { user } = useAuthContext();
 
@@ -180,7 +183,7 @@ export default function AccountGeneral() {
               <RHFTextField name="about" multiline rows={4} label="About" />
 
               <LoadingButton type="submit" variant="contained" loading={isSubmitting}>
-                Save Changes
+                {`${translate('save_changes')}`}
               </LoadingButton>
             </Stack>
           </Card>

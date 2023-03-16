@@ -54,10 +54,6 @@ const navConfig = [
         title: 'gallery',
         path: PATH_DASHBOARD.gallery.root,
         icon: ICONS.gallery,
-        children: [
-          { title: 'list', path: PATH_DASHBOARD.gallery.list },
-          { title: 'create', path: PATH_DASHBOARD.gallery.new },
-        ],
       },
       {
         title: 'history',
